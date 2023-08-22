@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cryptocoursework.AppController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button fx:id="btnFileChooser" mnemonicParsing="false" onAction="#choosingFile" prefWidth="130.0" text="Choose your file" textAlignment="CENTER" />
+            <Separator opacity="0.0" prefHeight="1.0" prefWidth="40.0" />
+            <TextField fx:id="textFieldFilePath" prefWidth="500.0" />
+            <Separator opacity="0.0" prefHeight="0.0" prefWidth="10.0" />
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <RadioButton fx:id="rdbtnSend" mnemonicParsing="false" text="Send">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="SendingMode" />
+                     </toggleGroup></RadioButton>
+                  <Separator opacity="0.0" orientation="VERTICAL" prefHeight="10.0" prefWidth="0.0" />
+                  <RadioButton fx:id="rdbtnDownload" mnemonicParsing="false" text="Download" toggleGroup="$SendingMode" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Separator opacity="0.0" orientation="VERTICAL" prefHeight="100.0" />
+      <VBox alignment="CENTER" prefHeight="240.0" prefWidth="800.0">
+         <children>
+            <Label fx:id="lblInfo" text="Выберите файл" />
+            <Separator opacity="0.0" orientation="VERTICAL" prefHeight="38.0" prefWidth="6.0" />
+            <Button fx:id="btnRun" mnemonicParsing="false" onAction="#Run" prefHeight="60.0" prefWidth="190.0" text="Run" textAlignment="CENTER" />
+         </children>
+      </VBox>
+   </children>
+</VBox>
